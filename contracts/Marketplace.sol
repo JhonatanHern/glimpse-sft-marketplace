@@ -4,7 +4,7 @@ pragma solidity 0.8.4;
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract Marketplace1155 is ERC1155 {
+contract Marketplace is ERC1155 {
     mapping(uint => string) public fileHash;// ipfs hash
     mapping(uint => mapping(address => uint)) public tokenPrice;// price for every token on sale by every user. token => (user => price)
     mapping(string => bool) hashExists;
